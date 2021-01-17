@@ -16,7 +16,7 @@ class Article {
       <div class="item-card">
         <h1>${this.title}</h1>
         ${this.body}
-        <p>${this.time_create}</p>
+        <p>${convertTime(this.time_create)}</p>
         <div class="card-button" onclick="showArticlePreview(${globalStart}, ${globalEnd})">Back</div>
       </div>
     `;
@@ -41,7 +41,19 @@ class Article {
   }
 
 }
+// convert UNIX time
+function convertTime(unixTime) {
+  var date = new Date(unixTime * 1000);
+  var day = date.getDate();
+  var month = date.getMonth();
+  var year = date.getFullYear();
+  var hours = date.getHours();
+  var minutes = "0" + date.getMinutes();
+  var seconds = "0" + date.getSeconds();
+  var formattedTime = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 
+  return formattedTime
+}
 
 // show articles preview
 function showArticlePreview(start, end) {
