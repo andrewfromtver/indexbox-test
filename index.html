@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Main</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <p>Test page created by Andranik S.</p>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-items">
+        <h3>Cards Filters</h3>
+        <div class="action-buttons-2">
+          <div class="input-group">
+            <label class="input-underlined">
+            <input
+                required
+                id="views-from"
+                type="number" inputmode="numeric"
+            >
+            <span class="input-label">Views (from)</span>
+          </div>
+          <div class="input-group">
+            <label class="input-underlined">
+            <input
+                required
+                id="views-to"
+                type="number" inputmode="numeric"
+            >
+            <span class="input-label">Views (to)</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label class="input-underlined">
+          <input
+              oninput="helper()"
+              required
+              id="name"
+              type="text"
+          >
+          <span class="input-label">Product name</span>
+          <div class="input-helper"></div>
+        </div>
+        <div class="input-group">
+          <label class="input-underlined">
+          <input
+              id="date-from"
+              type="datetime-local" inputmode="numeric"
+          >
+        </div>
+        <div class="input-group">
+          <label class="input-underlined">
+          <input
+              id="date-to"
+              type="datetime-local" inputmode="numeric"
+          >
+        </div>
+        <div class="action-buttons">
+          <div class="card-button" onclick="filterData(true)">Find</div>
+          <div class="card-button" onclick="filterData()">Clear</div>
+        </div>
+        <br>
+        <h3>Shown cards QTY</h3>
+        <div class="items-qty">
+          <p>Max in page</p>
+          <select class="cards-qty">
+            <option value="1">1 Card</option>
+            <option value="3">3 Cards</option>
+            <option value="5">5 Cards</option>
+            <option value="10">10 Cards</option>
+            <option value="20">20 Cards</option>
+          </select>
+        </div>
+        <div class="action-buttons">
+          <div class="prev"></div>
+          <div class="next"></div>
+        </div>
+      </div>
+    </div>
+    <div class="content"></div>
+  </div>
+  <div class="downloader"></div>
+  <script src="./test_data/test_data.js"></script>
+  <script src="./router.js"></script>
+  <script src="./article.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
