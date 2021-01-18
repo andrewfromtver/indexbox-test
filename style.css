@@ -163,6 +163,8 @@ select {
   padding-left: 20px;
   padding-top: 7px;
   color: #333;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .downloader {
   background-color: #fff;
@@ -204,6 +206,7 @@ div.input-group {
 /* Input*/
 .input-underlined > input,
 .input-filled > input {
+  border-radius: 0;
   width: 88%;
   margin: 10px 6%;
 	border: none;
@@ -211,6 +214,8 @@ div.input-group {
 	height: 32px;
   padding-left: 5px;
   padding-bottom: 0;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .input-underlined > input:focus,

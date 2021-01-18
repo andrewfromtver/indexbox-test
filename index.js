@@ -8,12 +8,12 @@ function sidebar(state = true) {
   document.querySelector('.cards-qty').disabled = !state;
   document.querySelectorAll('.action-button').forEach(function(e){e.disabled = !state}); 
   if (state) {
-    document.querySelector('.sidebar').style.width = '300px';
-    document.querySelector('.content').style.margin = '20px 10px 20px 310px';
+    document.querySelector('.sidebar').style.width = '320px';
+    document.querySelector('.content').style.margin = '10px 10px 10px 330px';
   }
   if (!state) {
     document.querySelector('.sidebar').style.width = '0px';
-    document.querySelector('.content').style.margin = '20px auto';
+    document.querySelector('.content').style.margin = '10px auto';
   }
 }
 
